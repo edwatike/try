@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ article.title }}</title>
+</head>
+<body>
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.published }}</p>
+    <p>{{ article.full_text }}</p>
+    {% for media in article.media %}
+        <img src="{{ media }}" alt="Media" style="max-width: 500px;">
+    {% endfor %}
+    <a href="/">Назад</a>
+</body>
+</html>

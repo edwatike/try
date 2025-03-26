@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Новости</title>
+</head>
+<body>
+    <h1>Последние новости</h1>
+    <ul>
+    {% for article in articles %}
+        <li>
+            <h2><a href="/article/{{ article.id }}">{{ article.title }}</a></h2>
+            <p>{{ article.summary }}</p>
+            <p>{{ article.published }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

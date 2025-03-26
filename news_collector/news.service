@@ -1,0 +1,11 @@
+[Unit]
+Description=News Collector Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /path/to/news_collector/app/main.py
+WorkingDirectory=/path/to/news_collector
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
